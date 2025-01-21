@@ -1,5 +1,5 @@
 
-def sendNotification() {
+def sendnotification() {
         if (currentBuild.result == 'FAILURE')
         mail to: 'rishabap23@gmail.com',
         subject: "Pipeline Failure: ${currentBuild.fullDisplayName}",
