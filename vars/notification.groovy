@@ -1,7 +1,8 @@
-def notification(){
-  failure {
+
+def sendNotification() {
+    if (currentBuild.result == 'FAILURE') {
         mail to: 'rishabap23@gmail.com',
-             subject: "Pipeline Execution: ${currentBuild.fullDisplayName}",
-             body: "The build ${currentBuild.fullDisplayName} has completed with status: ${currentBuild.result}."
+             subject: "Pipeline Failure: ${currentBuild.fullDisplayName}",
+             body: "The build ${currentBuild.fullDisplayName} failed. Please check the logs for details."
     }
 }
