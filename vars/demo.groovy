@@ -1,4 +1,4 @@
 def call()
 {
-  sh 'hello wordl'
+  sh ' print message hello wordl'
 }
